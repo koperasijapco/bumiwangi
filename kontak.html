@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Desa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d4ed91;
+        }
+        .navbar {
+            background-color: #4CAF50;
+            overflow: hidden;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+            font-size: 18px;
+        }
+        .navbar a:hover {
+            background-color: #45a049;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: left;
+        }
+        .section {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .form-container {
+            margin-top: 20px;
+        }
+        .form-container input, 
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+        .map-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu Navigasi -->
+    <div class="navbar">
+        <a href="index.html">Beranda</a>
+        <a href="profil.html">Profil</a>
+        <a href="pemerintahan.html">Pemerintahan</a>
+        <a href="layanan.html">Layanan</a>
+        <a href="berita.html">Berita</a>
+        <a href="kontak.html">Kontak</a>
+    </div>
+
+    <div class="container">
+        <h1>Hubungi Kami</h1>
+
+        <div class="section">
+            <h2>Informasi Kontak</h2>
+            <p><strong>Alamat:</strong> Jl. Raya Desa No.123, Kabupaten Bandung, Jawa Barat</p>
+            <p><strong>Telepon:</strong> (022) 123456</p>
+            <p><strong>Email:</strong> info@desakami.com</p>
+            <p><strong>Instagram:</strong> <a href="#">@desa_kami</a></p>
+            <p><strong>Facebook:</strong> <a href="#">facebook.com/desakami</a></p>
+        </div>
+
+        <!-- Formulir Kontak -->
+        <div class="form-container">
+            <h2>Kirim Pesan</h2>
+            <form action="submit_form.php" method="post">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="pesan">Pesan:</label>
+                <textarea id="pesan" name="pesan" rows="5" required></textarea>
+
+                <button type="submit">Kirim</button>
+                <button type="reset">Reset</button>
+            </form>
+        </div>
+
+        <!-- Peta Lokasi -->
+        <div class="map-container">
+            <h2>Lokasi Desa</h2>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25037.23314407952!2d107.67452777899038!3d-7.037456456947161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c1b831826dc5%3A0xdbb58933eefd4b6e!2sBumiwangi%2C%20Ciparay%2C%20Bandung%20Regency%2C%20West%20Java!5e1!3m2!1sen!2sid!4v1742135443755!5m2!1sen!2sid" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            </iframe>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Profil Desa | Hak Cipta Dilindungi</p>
+    </div>
+
+</body>
+</html>
