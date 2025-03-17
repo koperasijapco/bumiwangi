@@ -89,7 +89,18 @@ h2 {
             width: 100%;
             height: 100%;
         }         
+@media (max-width: 768px) {
+            .map-container {
+                padding-bottom: 75%; /* Rasio 4:3, yang membuat peta lebih tinggi */
+            }
+        }
 
+        /* Media Query untuk layar besar atau desktop */
+        @media (min-width: 769px) {
+            .map-container {
+                padding-bottom: 56.25%; /* Rasio 16:9 untuk layar besar */
+            }
+        }
         }
 
                }
