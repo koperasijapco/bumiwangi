@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontak Desa</title>
+    <title>Peta Lokasi</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -66,30 +67,32 @@
         .form-container button:hover {
             background-color: #45a049;
         }
-         .map-container {
+h2 {
+            position: relative; /* Menambahkan posisi relatif pada judul */
+            z-index: 10; /* Menetapkan z-index lebih tinggi dari peta */
+            margin-bottom: 20px; /* Memberikan jarak antara judul dan peta */
+        }
+
+        .map-container {
             position: relative;
-            padding-bottom: 75%; /* Rasio 16:9 */
-            height: 20px;
+            padding-bottom: 56.25%; /* Rasio 16:9 untuk peta */
+            height: 0;
             overflow: hidden;
             max-width: 100%;
-            background: #f0f0f0;
-            margin: 0 auto; /* Membuat peta terpusat */
+            margin: 0 auto;
         }
 
         .map-container iframe {
             position: absolute;
-            top: 0;
+            top: 50px;
             left: 0;
             width: 100%;
             height: 100%;
+        }         
+
         }
 
-        /* Membatasi ukuran peta untuk perangkat mobile */
-        @media (max-width: 600px) {
-            .map-container {
-                padding-bottom: 75%; /* Rasio 4:3 untuk lebih kecil di HP */
-            }
-        }
+               }
         .footer {
             text-align: center;
             padding: 10px;
@@ -143,10 +146,11 @@
 
         <!-- Peta Lokasi -->
         <div class="map-container">
-            <h2>Lokasi Desa</h2>
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25037.23314407952!2d107.67452777899038!3d-7.037456456947161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c1b831826dc5%3A0xdbb58933eefd4b6e!2sBumiwangi%2C%20Ciparay%2C%20Bandung%20Regency%2C%20West%20Java!5e1!3m2!1sen!2sid!4v1742135443755!5m2!1sen!2sid" width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen>
-            </iframe>
+            <h2>Peta Desa Bumi Wangi</h2>
+
+
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25037.23314407952!2d107.67452777899038!3d-7.037456456947161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c1b831826dc5%3A0xdbb58933eefd4b6e!2sBumiwangi%2C%20Ciparay%2C%20Bandung%20Regency%2C%20West%20Java!5e1!3m2!1sen!2sid!4v1742175305409!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 
